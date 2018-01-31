@@ -4,7 +4,7 @@ $(document).ready(function () {
     $(window).scroll(function(){
         var wscroll = $(document).scrollTop();
         
-        if(wscroll > 100) {
+        if(wscroll > 300) {
             $('#navbar').addClass("fixed-top").slideDown();
         } else {
             $('#navbar').fadeOut("slow", "linear");
