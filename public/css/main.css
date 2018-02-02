@@ -1,3 +1,11 @@
+@media (max-width: 576px) {
+	#buttons ul{
+		max-width: 300px;
+	}
+	
+}
+
+
 body {
   font-family: Raleway, sans-serif!important;
 }
@@ -26,7 +34,7 @@ h2 {
   height: 50em;
   position: relative;
   color: white;
-  z-index: 0;
+  z-index: 9;
 }
 
 #navlogo {
@@ -58,6 +66,7 @@ h2 {
 #buttons {
 	position: absolute;
 	top: 50px;
+	z-index: 10;
 }
 
 #blurb {
@@ -74,7 +83,6 @@ h2 {
 
 .navbar {
   box-shadow: 0px 0px 0.5px gray;
-  z-index: 9999;
 }
 
 .navbar > button {
@@ -113,6 +121,7 @@ ul.list-inline{
 }
 
 /*Zoom in to picture===============================================*/
+
 .row {
 	height: 40vw;
 	min-height: 500px;
@@ -150,10 +159,10 @@ div.col-md-6 {
 }
 
 .zoom {
-    -webkit-transition: all 2s ease-in-out;
-    -moz-transition: all 2s ease-in-out;
-    -o-transition: all 2s ease-in-out;
-    -ms-transition: all 2s ease-in-out;
+    -webkit-transition: all 1s ease-in;
+    -moz-transition: all 1s ease-in;
+    -o-transition: all 1s ease-in;
+    -ms-transition: all 1s ease-in;
 }
 
 .transition {
@@ -161,6 +170,23 @@ div.col-md-6 {
     -moz-transform: scale(1.2);
     -o-transform: scale(1.2);
     transform: scale(1.2);
+}
+
+.pic-hover .text-hover{
+	position: relative;
+	display: block;
+	text-align: center;
+	top:40%;
+	color: white;
+	font-weight: 900;
+	font-size: 40px;
+	text-decoration: none;
+	visibility: hidden;
+
+}
+
+.pic-hover:hover .text-hover {
+	visibility: visible;
 }
 
 
