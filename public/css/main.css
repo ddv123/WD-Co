@@ -185,15 +185,13 @@ ul.list-inline{
 
 
 .segment {
-	height: 400px;
-	padding:50px 50px;
+	padding:70px 60px;
 	overflow: auto;
 	font-size: 18px;
 }
 
 .content {
 	max-width:880px;
-	height: 200px;
 	margin: auto auto;
 
 }
@@ -363,6 +361,7 @@ a.icons {
 	left: 85%;
 	right: 0;
 	text-align: center;
+	z-index: 10;
 }
 .scroll-btn > * {
 	display: inline-block;
