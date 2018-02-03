@@ -185,7 +185,7 @@ ul.list-inline{
 
 
 .segment {
-	padding:70px 60px;
+	padding:67px 30px;
 	overflow: auto;
 	font-size: 18px;
 }
@@ -227,6 +227,13 @@ ul.list-inline{
 
 }
 
+#web1:hover {
+	background-image:linear-gradient(70deg,
+      rgba(25, 0, 255, 0.45), 
+      rgba(255, 100, 0, 0.45)),
+      url("https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?h=350&auto=compress&cs=tinysrgb");
+}
+
 #web2 {
 	background-image: url("https://images.pexels.com/photos/685531/pexels-photo-685531.jpeg?h=350&auto=compress&cs=tinysrgb");
 	background-size: cover;
@@ -234,14 +241,22 @@ ul.list-inline{
 
 }
 
+#web2:hover {
+	background-image:linear-gradient(-70deg,
+      rgba(25, 0, 255, 0.45), 
+      rgba(255, 100, 0, 0.45)),
+      url("https://images.pexels.com/photos/685531/pexels-photo-685531.jpeg?h=350&auto=compress&cs=tinysrgb");
+}
+
 .zoom {
-    -webkit-transition: all 1s ease-in;
-    -moz-transition: all 1s ease-in;
-    -o-transition: all 1s ease-in;
-    -ms-transition: all 1s ease-in;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
 }
 
 .transition {
+	
     -webkit-transform: scale(1.2); 
     -moz-transform: scale(1.2);
     -o-transform: scale(1.2);
@@ -252,8 +267,8 @@ ul.list-inline{
 	position: relative;
 	display: block;
 	text-align: center;
-	top: 40%;
 	color: white;
+	top: 40%;
 	font-weight: 900;
 	font-size: 40px;
 	text-decoration: none;
@@ -261,8 +276,10 @@ ul.list-inline{
 
 }
 
+
 .pic-hover:hover .text-hover {
 	visibility: visible;
+	opacity: 1!important;
 }
 
 /*Footer======================================================================*/
@@ -276,13 +293,12 @@ ul.list-inline{
 
 #address{
 	text-align: right;
-	padding-right: 5vw;
-	padding-top: 30px;
+	padding: 20px 5vw;
 	list-style-type: none;
 }
 
 .social {
-	padding: 20px 0 0 20px;
+	padding: 20px 5vw;
 }
 
 a.icons {
@@ -291,9 +307,9 @@ a.icons {
 }
 
 #social-icons {
-	padding: 5px 0 0 40px;
-	font-size: 30px;
+	padding: 5px 0;
 	margin: auto;
+	list-style-type: none;
 }
 
 
