@@ -55,6 +55,20 @@ $(document).ready(function () {
           }
         }
       });
+      
+      var url = window.location.pathname;
+      console.log(url)
+      if(url === "/"){
+        $("#landing").addClass("landing-home");
+      }
+      
+      if(url === "/capabilities"){
+        $("#landing").addClass("landing-capabilities");
+        $("h1").text("Capabilities");
+        $("h3").text("Checkout the tools and features that can be used to create your website!");
+      }
+      
+      
     
     
 });

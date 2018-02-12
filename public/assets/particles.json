@@ -72,7 +72,7 @@
     "events": {
       "onhover": {
         "enable": false,
-        "mode": "remove"
+        "mode": "bubble"
       },
       "onclick": {
         "enable": true,
