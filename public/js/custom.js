@@ -66,6 +66,18 @@ $(document).ready(function () {
         $("#landing").addClass("landing-capabilities");
         $("h1").text("Capabilities");
         $("h3").text("Checkout the tools and features that can be used to create your website!");
+      } else if(url === "/work"){
+        $("#landing").addClass("landing-work");
+        $("h1").text("Work");
+        $("h3").text("It speaks for itself");
+      } else if(url === "/about"){
+        $("#landing").addClass("landing-about");
+        $("h1").text("About");
+        $("h3").text("Hello, my name is David and I specialize in web design and front end development.");
+      } else if(url === "/contact"){
+        $("#landing").addClass("landing-contact");
+        $("h1").text("Contact Me");
+        $("h3").text("You can find my contact information below");
       }
       
       
