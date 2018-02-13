@@ -1,7 +1,7 @@
 {
   "particles": {
     "number": {
-      "value": 25,
+      "value": 15,
       "density": {
         "enable": true,
         "value_area": 800
@@ -29,8 +29,8 @@
       "value": 0.3,
       "random": false,
       "anim": {
-        "enable": false,
-        "speed": 1,
+        "enable": true,
+        "speed": 0.2,
         "opacity_min": 0.1,
         "sync": false
       }
@@ -72,7 +72,7 @@
     "events": {
       "onhover": {
         "enable": false,
-        "mode": "bubble"
+        "mode": "repulse"
       },
       "onclick": {
         "enable": true,
@@ -96,7 +96,7 @@
       },
       "repulse": {
         "distance": 150,
-        "duration": 0.1
+        "duration": 2
       },
       "push": {
         "particles_nb": 4

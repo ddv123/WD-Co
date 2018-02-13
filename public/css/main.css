@@ -19,11 +19,12 @@ body {
 	
 	#buttons {
 		top: 35vh;
+		left: 50%;
+		transform: translate(-50%);
 	}
 	
 	.display-4 {
 		font-size: 40px!important;
-		padding-top: 14vh;
 		max-width: 400px!important;
 	}
 
@@ -32,9 +33,17 @@ body {
 	}
 	
 	#blurb {
-		padding-top: 5vh;
-		max-width: 400px;
+		color: black;
+		display: none;
 	}
+	
+	.home {
+		top: 5vh;
+		left: 50%;
+		transform: translate(-50%);
+		width: 200px!important;
+	}
+
 }
 
 @media (max-width: 768px) {
@@ -42,8 +51,10 @@ body {
 	.display-4 {
 		height: 30vh;
 		font-size: 65px;
-		padding-top: 13vh;
-		max-width: 500px;
+		width: 500px;
+		top: 30vh;
+		left: 50%;
+		transform: translate(-50%); 
 	}
 	
 
@@ -52,29 +63,52 @@ body {
 	}
 	
 	#buttons {
-		top: 35vh;
+		top: 50vh;
+		left: 50%;
+		transform: translate(-50%);
 	}
 
 	#blurb {
-		padding-top: 25vh;
+		top: 67vh!important;
+		left: 50%;
+		transform: translate(-50%);
+		width: 500px;
 	}
-	
+
 	h3 {
 		font-size: 24px;
 		z-index: 0;
+	}
+	
+	.home {
+		top: 5vh;
+		left: 50%;
+		transform: translate(-50%);
+		width: 300px;
 	}
 }
 
 @media (min-width: 769px){
 	
 	#buttons {
-		top: 8vh;
+		width: 500px;
+		top: 10vh;
+		left: 50%;
+		transform: translate(-50%);
 	}
 	
 	.display-4 {
 		font-size: 6em;
-		max-width: 880px;
-		padding-top: 18vh;
+		width: 880px;
+		top: 22vh;
+		left: 50%;
+		transform: translate(-50%);
+	}
+	
+	.home {
+		top: 4.5vh;
+		left: 5vh;
+		max-width: 150px;
 	}
 
 	h3 {
@@ -83,9 +117,12 @@ body {
 	}
 	
 	#blurb {
-		max-width:770px;
-		padding-top: 5vh;
+		top:40vh;
+		left: 50%;
+		transform: translate(-50%);
+		width: 700px;
 	}
+
 }
 
 .display-4{
@@ -165,7 +202,7 @@ h2 {
       linear-gradient(
       rgba(25, 0, 255, 0.45), 
       rgba(255, 100, 0, 0.45)),
-      url("../assets/img/rustic.jpeg");
+      url("../assets/img/code.jpeg");
 }
 
 .landing-work{
@@ -173,7 +210,6 @@ h2 {
       linear-gradient(
       rgba(25, 0, 255, 0.45), 
       rgba(255, 100, 0, 0.45)),
-      /*url("../assets/img/work.jpg");*/
       url("https://images.pexels.com/photos/273230/pexels-photo-273230.jpeg?w=940&h=650&auto=compress&cs=tinysrgb");
 }
 
@@ -184,7 +220,7 @@ h2 {
       rgba(255, 100, 0, 0.45)),
       url("../assets/img/bull.jpg");
       background-position: top!important;
-      background-size:contain;
+     
 }
 
 .landing-contact{
@@ -195,23 +231,27 @@ h2 {
       url("../assets/img/phone.jpeg");
 }
 
+.home {
+	position: absolute;
+	z-index: 11;
+}
+
+.display-4{
+	position: absolute;
+}
+
+#blurb {
+	position: absolute;
+}
+
 #buttons {
 	position: absolute;
-	z-index: 10;
 }
-
-
-
-ul.list-inline{
-	display: block;
-	margin: 0 auto;
-}
-
 
 
 #navlogo {
-  width: 2em;
-  height:2em;
+  max-width: 3em;
+  max-height:3em;
 }
 
 #navbar {
@@ -223,6 +263,13 @@ ul.list-inline{
   float:right;
   clear: right;
   text-align: right;
+}
+
+
+
+#wd-white {
+	width: 100%;
+	height: 100%;
 }
 
 #particles{
@@ -449,7 +496,7 @@ a.icons {
 	display: block;
 	position: absolute;
 	bottom: 5vh;
-	left: 85%;
+	left: 83%;
 	right: 0;
 	text-align: center;
 	z-index: 9;

@@ -57,15 +57,13 @@ $(document).ready(function () {
       });
       
       var url = window.location.pathname;
-      console.log(url)
       if(url === "/"){
         $("#landing").addClass("landing-home");
-      }
-      
-      if(url === "/capabilities"){
+        $("#blurb").css("top", "50vh");
+      } else if(url === "/capabilities"){
         $("#landing").addClass("landing-capabilities");
         $("h1").text("Capabilities");
-        $("h3").text("Checkout the tools and features that can be used to create your website!");
+        $("h3").text("The key is in the code");
       } else if(url === "/work"){
         $("#landing").addClass("landing-work");
         $("h1").text("Work");
