@@ -56,27 +56,43 @@ $(document).ready(function () {
         }
       });
       
+      // change hero picture
       var url = window.location.pathname;
       if(url === "/"){
         $("#landing").addClass("landing-home");
-        $("#blurb").css("top", "50vh");
+        // $("#blurb").css("top", "55vh");
+        $(".main").addClass("active");
       } else if(url === "/capabilities"){
         $("#landing").addClass("landing-capabilities");
         $("h1").text("Capabilities");
         $("h3").text("The key is in the code");
+        $(".capabilities").addClass("active");
+        
       } else if(url === "/work"){
         $("#landing").addClass("landing-work");
         $("h1").text("Work");
         $("h3").text("It speaks for itself");
+        $(".work").addClass("active");
       } else if(url === "/about"){
         $("#landing").addClass("landing-about");
         $("h1").text("About");
         $("h3").text("Hello, my name is David and I specialize in web design and front end development.");
+        $(".about").addClass("active");
       } else if(url === "/contact"){
         $("#landing").addClass("landing-contact");
         $("h1").text("Contact Me");
         $("h3").text("You can find my contact information below");
+        $(".contact").addClass("active");
       }
+      
+      // hover on home logo
+      $(".hover").hover(function(){
+      
+        $(this).fadeTo("fast", 0.6);
+      }, function(){
+        $(this).fadeTo("fast", "1");
+      });
+      
       
       
     
