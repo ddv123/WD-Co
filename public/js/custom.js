@@ -4,7 +4,7 @@ $(document).ready(function () {
     $(window).scroll(function(){
         var wscroll = $(document).scrollTop();
         
-        if(wscroll > 300) {
+        if(wscroll > 700) {
             $('#navbar').slideDown();
         } else {
             $('#navbar').fadeOut("slow", "linear");
@@ -85,7 +85,7 @@ $(document).ready(function () {
         $(".contact").addClass("active");
       }
       
-      // hover on home logo
+      // hover on item
       $(".hover").hover(function(){
       
         $(this).fadeTo("fast", 0.6);
@@ -93,6 +93,21 @@ $(document).ready(function () {
         $(this).fadeTo("fast", "1");
       });
       
+      
+      
+      $(".lt-side").hide();
+      $(".lets-talk").hover(function(){
+        
+        $(".lt-side").show(1000,"swing");
+      }, function(){
+        $(".lt-side").hide(1000);
+      });
+      
+      // $("lets-talk").hover(function(){
+      //   $("lt-side").show();
+      // }, function(){
+      //   
+      // });
       
       
     
