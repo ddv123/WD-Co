@@ -83,6 +83,7 @@ $(document).ready(function () {
         $("h1").text("Contact Me");
         $("h3").text("You can find my contact information below");
         $(".contact").addClass("active");
+        $(".cta").hide();
       }
       
       // hover on item
@@ -98,9 +99,9 @@ $(document).ready(function () {
       $(".lt-side").hide();
       $(".lets-talk").hover(function(){
         
-        $(".lt-side").show(1000,"swing");
+        $(".lt-side").show("fast","swing");
       }, function(){
-        $(".lt-side").hide(1000);
+        $(".lt-side").hide("fast");
       });
       
       // $("lets-talk").hover(function(){
