@@ -1,5 +1,19 @@
 $(document).ready(function () {
-
+  
+    particlesJS.load('particles', '/assets/particles.json', function() {
+          console.log('callback - particles.js config loaded');
+        });
+        
+    // init Masonry
+    var $grid = $('.grid').masonry({
+      // options...
+    });
+    // layout Masonry after each image loads
+    $grid.imagesLoaded().progress( function() {
+      $grid.masonry('layout');
+    });    
+        
+        
     //dynamic navbar
     $(window).scroll(function(){
         var wscroll = $(document).scrollTop();
@@ -18,6 +32,14 @@ $(document).ready(function () {
         $(this).removeClass('transition');
     });
     
+    // shift up transition
+    
+    $('.category').hover(function() {
+        $(this).addClass('shiftup');
+    }, function() {
+        $(this).removeClass("shiftup");
+    });
+      
     // Scroll transition to anchor
     // Select all links with hashes
     $('a[href*="#"]')
