@@ -7,6 +7,9 @@ $(document).ready(function () {
     // init Masonry
     var $grid = $('.grid').masonry({
       // options...
+        itemSelector: '.grid-item',
+        // use element for option
+        columnWidth: '.grid-item',
     });
     // layout Masonry after each image loads
     $grid.imagesLoaded().progress( function() {
@@ -18,7 +21,7 @@ $(document).ready(function () {
     $(window).scroll(function(){
         var wscroll = $(document).scrollTop();
         
-        if(wscroll > 700) {
+        if(wscroll > 600) {
             $('#navbar').slideDown();
         } else {
             $('#navbar').fadeOut("slow", "linear");
@@ -32,8 +35,7 @@ $(document).ready(function () {
         $(this).removeClass('transition');
     });
     
-    // shift up transition
-    
+    // shift up skill transition
     $('.category').hover(function() {
         $(this).addClass('shiftup');
     }, function() {
@@ -78,7 +80,7 @@ $(document).ready(function () {
         }
       });
       
-      // change hero picture
+      // change hero landing
       var url = window.location.pathname;
       if(url === "/"){
         $("#landing").addClass("landing-home");
@@ -111,13 +113,13 @@ $(document).ready(function () {
       // hover on item
       $(".hover").hover(function(){
       
-        $(this).fadeTo("fast", 0.6);
+        $(this).fadeTo(50, 0.1);
       }, function(){
-        $(this).fadeTo("fast", "1");
+        $(this).fadeTo(50, "1");
       });
       
       
-      
+      // lets talk button
       $(".lt-side").hide();
       $(".lets-talk").hover(function(){
         
@@ -125,16 +127,7 @@ $(document).ready(function () {
       }, function(){
         $(".lt-side").hide("fast");
       });
-      
-      // $("lets-talk").hover(function(){
-      //   $("lt-side").show();
-      // }, function(){
-      //   
-      // });
-      
-      
-    
-    
+        
 });
 
 
