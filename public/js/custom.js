@@ -112,8 +112,12 @@ $(document).ready(function () {
       
       // hover on item
       $(".hover").hover(function(){
-      
-        $(this).fadeTo(50, 0.1);
+        
+        if($(this).hasClass("home") || $(this).hasClass("scroll-btn")){
+          $(this).fadeTo(200, 0.5);
+        } else {
+          $(this).fadeTo(200, 0.2);
+        }
       }, function(){
         $(this).fadeTo(50, "1");
       });

@@ -242,6 +242,24 @@ h2 {
     transform: scale(1.2);
 }
 
+/*about section=========================================*/
+#my-pic {
+	height: 325px;
+}
+
+#my-pic-img {
+	opacity: 0.85;
+	position: absolute;
+	padding: 0 0;
+	margin: 0 0!important;
+	left: 50%;
+	transform: translate(-50%);
+	margin: 10px;
+	max-width: 300px;
+	
+}
+
+
 /*call to action:=====================================================*/
 
 .cta {
