@@ -44,6 +44,9 @@
 	.grid-item {
 		width: 100%!important;
 	}
+	.sizer {
+		max-width: 200px;
+	}
 
 }
 
@@ -91,6 +94,9 @@
 		width: 100%;
 	}
 
+	.sizer {
+		max-width: 400px;
+	}
 }
 
 @media (min-width: 769px){
@@ -126,12 +132,20 @@
 	.grid-item {
 		width: 50%;
 	}
+	
+	.sizer {
+		max-width: 600px;
+	}
 
 }
 
 @media (min-width: 992px) { 
 	.grid-item {
 		width: 33.333333%;
+	}
+	
+	.sizer {
+		max-width: 800px;
 	}
 }
 
@@ -185,7 +199,7 @@
   background-image:   
       linear-gradient(
       rgba(25, 0, 255, 0.45), 
-      rgba(255, 100, 0, 0.45)),
+      rgba(255, 100, 0, 0.40)),
       url("../assets/img/html_css.jpeg");
   
  

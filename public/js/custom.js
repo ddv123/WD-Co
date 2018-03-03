@@ -88,28 +88,28 @@ $(document).ready(function () {
         $(".main").addClass("active");
       } else if(url === "/capabilities"){
         $("#landing").addClass("landing-capabilities");
-        $("#landing").css("min-height", "70vh");
+        $("#landing").css("min-height", "80vh");
         $("h1").text("Capabilities");
         $("h3").text("The key is in the code");
         $(".capabilities").addClass("active");
         
       } else if(url === "/work"){
         $("#landing").addClass("landing-work");
-        $("#landing").css("min-height", "70vh");
+        $("#landing").css("min-height", "80vh");
         $("h1").text("Work");
         $("h3").text("It speaks for itself");
         $(".work").addClass("active");
       } else if(url === "/about"){
         $("#landing").addClass("landing-about");
-        $("#landing").css("min-height", "70vh");
+        $("#landing").css("min-height", "80vh");
         $("h1").text("About");
         $("h3").text("Hello, my name is David and I specialize in web design and front end development.");
         $(".about").addClass("active");
       } else if(url === "/contact"){
         $("#landing").addClass("landing-contact");
-        $("#landing").css("min-height", "70vh");
-        $("h1").text("Contact Me");
-        $("h3").text("You can find my contact information below");
+        $("#landing").css("min-height", "80vh");
+        $("h1").text("Contact");
+        $("h3").text("Let us know how we can help");
         $(".contact").addClass("active");
         $(".cta").hide();
       }
@@ -135,14 +135,32 @@ $(document).ready(function () {
       }, function(){
         $(".lt-side").hide("fast");
       });
-        
-      $("#show-more").click(function(){
-        console.log("hello");
-        $(".code").slideToggle(2000);
-      })  
           
+      // skill slide shelf   
+      $("#brand").click(function(){
         
+        $(this).html($(this).html() == '<i class="fas fa-angle-double-up"></i>' ? '<i class="fas fa-angle-double-down"></i>' : '<i class="fas fa-angle-double-up"></i>');
         
+        $(".code1").slideToggle(500);
+        
+      });
+      
+      $("#web-dev").click(function(){
+        
+        $(this).html($(this).html() == '<i class="fas fa-angle-double-up"></i>' ? '<i class="fas fa-angle-double-down"></i>' : '<i class="fas fa-angle-double-up"></i>');
+        
+        $(".code2").slideToggle(500);
+        
+      });
+      
+      $("#dmna").click(function(){
+        
+        $(this).html($(this).html() == '<i class="fas fa-angle-double-up"></i>' ? '<i class="fas fa-angle-double-down"></i>' : '<i class="fas fa-angle-double-up"></i>');
+        
+        $(".code3").slideToggle(500);
+        
+      });
+      
 });
 
 
