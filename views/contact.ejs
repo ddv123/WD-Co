@@ -1,18 +1,21 @@
 <% include partials/header %>
 
-  <div class="form-container" id="div1">
-    <div class="wrapper">
+  <div class="form-container">
+    <div class="wrapper" id="div1">
       <div class="company-info">
         <h4>The Web Design Company</h4>
         <ul>
-          <li><i class="fa fa-map-marker-alt"></i> 44 Something st</li>
-          <li><i class="fa fa-phone"></i> (555) 555-5555</li>
-          <li><i class="fa fa-envelope"></i> test@acme.test</li>
+          <li><a href="#"><i class="fa fa-map-marker-alt"></i></a> 44 Something st</li>
+          <li><a href="#"><i class="fa fa-phone"></i></a> (555) 555-5555</li>
+          <li><a href="#"><i class="fa fa-envelope"></i></a> test@acme.test</li>
         </ul>
       </div>
       <div class="contact">
+        <div class="alert alert-primary" role="alert">
+          Your message has been sent!
+        </div>
         <h4>Email Us</h4>
-        <form>
+        <form id="contact-form">
           <div class="row">
               <div class="form-group col-md-6 padding">
                 <p>
@@ -46,38 +49,42 @@
           <div class="row mb-4">
             <div class="col">
               <p>Type of Project</p>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                <label class="form-check-label" for="inlineCheckbox1">Brand Strategy</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                <label class="form-check-label" for="inlineCheckbox2">Logo</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
-                <label class="form-check-label" for="inlineCheckbox3">UI/UX</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4">
-                <label class="form-check-label" for="inlineCheckbox4">Web</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="option5">
-                <label class="form-check-label" for="inlineCheckbox5">SEO</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox6" value="option6">
-                <label class="form-check-label" for="inlineCheckbox6">Social Media</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox7" value="option7">
-                <label class="form-check-label" for="inlineCheckbox7">Digital Marketing</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox7" value="option7">
-                <label class="form-check-label" for="inlineCheckbox7">Not Sure</label>
-              </div>
+              <ul id="proj-type">
+                <li class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="brand-strategy">
+                  <label class="form-check-label" for="inlineCheckbox1">Brand Strategy</label>
+                </li>
+                <li class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="logo">
+                  <label class="form-check-label" for="inlineCheckbox2">Logo</label>
+                </li>
+                <li class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="ui-ux">
+                  <label class="form-check-label" for="inlineCheckbox3">UI/UX</label>
+                </li>
+                <li class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="web">
+                  <label class="form-check-label" for="inlineCheckbox4">Web</label>
+                </li>
+                <li class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="seo">
+                  <label class="form-check-label" for="inlineCheckbox5">SEO</label>
+                </li>
+                <li class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox6" value="social-media">
+                  <label class="form-check-label" for="inlineCheckbox6">Social Media</label>
+                </li>
+                <li class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox7" value="digital-marketing">
+                  <label class="form-check-label" for="inlineCheckbox7">Digital Marketing</label>
+                </li>
+                <li class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox7" value="not-sure">
+                  <label class="form-check-label" for="inlineCheckbox7">Not Sure</label>
+                </li>
+              </ul>
+             
+              
             </div>
           </div>
           
@@ -94,7 +101,7 @@
           <div class="row">
             <div class="col padding">
               <p>
-                <button class="btn btn-warning">Submit</button>
+                <button href="#div1" class="btn btn-warning" id="submit-button">Submit</button>
               </p>
             </div>
           </div>
@@ -105,7 +112,6 @@
       </div>
     </div>
   </div>
-
 
 <% include partials/footer %>    
     

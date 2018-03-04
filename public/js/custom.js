@@ -4,6 +4,20 @@ $(document).ready(function () {
           console.log('callback - particles.js config loaded');
         });
         
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyDRu2NusFCo56QtJ5Z3a7_OA243uHXzbgc",
+      authDomain: "wd-company.firebaseapp.com",
+      databaseURL: "https://wd-company.firebaseio.com",
+      projectId: "wd-company",
+      storageBucket: "wd-company.appspot.com",
+      messagingSenderId: "26738588247"
+    };
+    firebase.initializeApp(config);    
+        
+    //References messages collection
+    var messageRef = firebase.database().ref('messages');
+        
     // init Masonry
     var $grid = $('.grid').masonry({
       // options...
@@ -74,7 +88,7 @@ $(document).ready(function () {
               } else {
                 $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
                 $target.focus(); // Set focus again
-              };
+              }
             });
           }
         }
@@ -88,28 +102,28 @@ $(document).ready(function () {
         $(".main").addClass("active");
       } else if(url === "/capabilities"){
         $("#landing").addClass("landing-capabilities");
-        $("#landing").css("min-height", "80vh");
+        $("#landing").css("min-height", "60vh");
         $("h1").text("Capabilities");
         $("h3").text("The key is in the code");
         $(".capabilities").addClass("active");
         
       } else if(url === "/work"){
         $("#landing").addClass("landing-work");
-        $("#landing").css("min-height", "80vh");
+        $("#landing").css("min-height", "60vh");
         $("h1").text("Work");
         $("h3").text("It speaks for itself");
         $(".work").addClass("active");
       } else if(url === "/about"){
         $("#landing").addClass("landing-about");
-        $("#landing").css("min-height", "80vh");
+        $("#landing").css("min-height", "60vh");
         $("h1").text("About");
         $("h3").text("Hello, my name is David and I specialize in web design and front end development.");
         $(".about").addClass("active");
       } else if(url === "/contact"){
         $("#landing").addClass("landing-contact");
-        $("#landing").css("min-height", "80vh");
+        $("#landing").css("min-height", "60vh");
         $("h1").text("Contact");
-        $("h3").text("Let us know how we can help");
+        $("h3").text("You can find my contact information below");
         $(".contact").addClass("active");
         $(".cta").hide();
       }
@@ -161,6 +175,59 @@ $(document).ready(function () {
         
       });
       
+      
+      
+    // connect contact message to firebase  
+    $("#contact-form").submit(submitForm);
+    
+    // listen and submit form
+    function submitForm(e) {
+      e.preventDefault();
+      
+      //get values
+      var name = $("#name").val();
+      var company = $("#company").val();
+      var email = $("#email").val();
+      var phone = $("#phone").val();
+      var message = $("#message").val();
+      var projType = [];
+      
+      $(".form-check-input").each(function(){
+        if($(this).is(":checked")){
+          projType.push($(this).val());
+        }
+      });
+      
+      // save message
+      saveMessage(name, company, email, phone, projType, message);
+      
+      // show alert
+      $(".alert").show();
+      
+      // hide alert after 3 seconds
+      $( ".alert" ).delay(4000).fadeOut("slow");
+      
+      // move window up to alert
+      $(window).scrollTop($('#div1').offset().top);
+
+      $("#contact-form").trigger("reset");
+
+    }
+    
+    //Save messages to firebase
+    function saveMessage(name, company, email, phone, projType, message){
+      var newMessageRef = messageRef.push();
+      newMessageRef.set({
+        name: name,
+        company: company,
+        email: email,
+        phone: phone,
+        projType: projType,
+        message: message
+      });
+    }
+
+    
 });
 
 

@@ -210,7 +210,7 @@
   background-image:   
       linear-gradient(
       rgba(25, 0, 255, 0.45), 
-      rgba(255, 100, 0, 0.45)),
+      rgba(255, 100, 0, 0.40)),
       url("../assets/img/code.jpeg");
 }
 
@@ -218,7 +218,7 @@
   background-image:   
       linear-gradient(
       rgba(25, 0, 255, 0.45), 
-      rgba(255, 100, 0, 0.45)),
+      rgba(255, 100, 0, 0.40)),
       url("https://images.pexels.com/photos/273230/pexels-photo-273230.jpeg?w=940&h=650&auto=compress&cs=tinysrgb");
 }
 
@@ -226,7 +226,7 @@
   background-image:   
       linear-gradient(
       rgba(25, 0, 255, 0.45), 
-      rgba(255, 100, 0, 0.45)),
+      rgba(255, 100, 0, 0.40)),
       url("../assets/img/bull.jpg");
       background-position: top!important;
      
@@ -236,7 +236,7 @@
   background-image:   
       linear-gradient(
       rgba(25, 0, 255, 0.45), 
-      rgba(255, 100, 0, 0.45)),
+      rgba(255, 100, 0, 0.40)),
       url("../assets/img/phone.jpeg");
 }
 

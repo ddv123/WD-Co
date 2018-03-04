@@ -8,12 +8,12 @@ p{
 }
 
 a{
-	color: rgba(255, 100, 0, 0.8);
+	color: rgba(255, 100, 0, 1);
 	text-decoration: none!important;
 }
 
 a:hover {
-	color: rgba(255, 100, 0, 0.5);
+	color: rgba(255, 100, 0, 0.6);
 	-webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out;
@@ -555,7 +555,7 @@ html { overflow-y: scroll; }
 .wrapper {
 	background-color: #f8f9fa;
 	box-shadow: 0 0 20px 0 rgba(25, 0, 255, 0.75);
-	margin-bottom: 50px;
+	margin: 50px 0;
 }
 
 .wrapper > *{
@@ -570,3 +570,7 @@ html { overflow-y: scroll; }
  .padding{
  	padding: 0 1em;
  }
+ 
+.alert {
+	display:none;
+}
