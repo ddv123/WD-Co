@@ -102,26 +102,26 @@ $(document).ready(function () {
         $(".main").addClass("active");
       } else if(url === "/capabilities"){
         $("#landing").addClass("landing-capabilities");
-        $("#landing").css("min-height", "60vh");
+        $("#landing").css("min-height", "550px");
         $("h1").text("Capabilities");
         $("h3").text("The key is in the code");
         $(".capabilities").addClass("active");
         
       } else if(url === "/work"){
         $("#landing").addClass("landing-work");
-        $("#landing").css("min-height", "60vh");
+        $("#landing").css("min-height", "550px");
         $("h1").text("Work");
         $("h3").text("It speaks for itself");
         $(".work").addClass("active");
       } else if(url === "/about"){
         $("#landing").addClass("landing-about");
-        $("#landing").css("min-height", "60vh");
+        $("#landing").css("min-height", "550px");
         $("h1").text("About");
         $("h3").text("Hello, my name is David and I specialize in web design and front end development.");
         $(".about").addClass("active");
       } else if(url === "/contact"){
         $("#landing").addClass("landing-contact");
-        $("#landing").css("min-height", "60vh");
+        $("#landing").css("min-height", "550px");
         $("h1").text("Contact");
         $("h3").text("You can find my contact information below");
         $(".contact").addClass("active");

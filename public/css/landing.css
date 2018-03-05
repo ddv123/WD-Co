@@ -97,6 +97,9 @@
 	.sizer {
 		max-width: 400px;
 	}
+	.parallax{
+		height: 300px;
+	}
 }
 
 @media (min-width: 769px){
