@@ -113,18 +113,18 @@ $(document).ready(function () {
         $("h1").text("Work");
         $("h3").text("It speaks for itself");
         $(".work").addClass("active");
-      } else if(url === "/about"){
-        $("#landing").addClass("landing-about");
-        $("#landing").css("min-height", "550px");
-        $("h1").text("About");
-        $("h3").text("Hello, my name is David and I specialize in web design and front end development.");
-        $(".about").addClass("active");
       } else if(url === "/contact"){
         $("#landing").addClass("landing-contact");
         $("#landing").css("min-height", "550px");
         $("h1").text("Contact");
-        $("h3").text("You can find my contact information below");
+        $("h3").text("Let us know how we can help");
         $(".contact").addClass("active");
+        $(".cta").hide();
+      } else if(url === "/coming-soon"){
+        $("#landing").addClass("landing-coming");
+        $("#landing").css("min-height", "80vh");
+        $("h1").text("Coming Soon");
+        $("h3").text("Page is under construction. Will be up shortly");
         $(".cta").hide();
       }
       
@@ -151,30 +151,24 @@ $(document).ready(function () {
       });
           
       // skill slide shelf   
+      
       $("#brand").click(function(){
-        
-        $(this).html($(this).html() == '<i class="fas fa-angle-double-up"></i>' ? '<i class="fas fa-angle-double-down"></i>' : '<i class="fas fa-angle-double-up"></i>');
-        
-        $(".code1").slideToggle(500);
-        
+        slideShelf("brand", "code1");
       });
       
       $("#web-dev").click(function(){
-        
-        $(this).html($(this).html() == '<i class="fas fa-angle-double-up"></i>' ? '<i class="fas fa-angle-double-down"></i>' : '<i class="fas fa-angle-double-up"></i>');
-        
-        $(".code2").slideToggle(500);
-        
+        slideShelf("web-dev", "code2");
       });
       
       $("#dmna").click(function(){
-        
-        $(this).html($(this).html() == '<i class="fas fa-angle-double-up"></i>' ? '<i class="fas fa-angle-double-down"></i>' : '<i class="fas fa-angle-double-up"></i>');
-        
-        $(".code3").slideToggle(500);
-        
+        slideShelf("dmna", "code3");
       });
       
+      function slideShelf(id, code){
+        $("#"+id).html($("#"+id).html() == '<i class="fas fa-angle-double-up"></i>' ? '<i class="fas fa-angle-double-down"></i>' : '<i class="fas fa-angle-double-up"></i>');
+        
+        $("#"+code).slideToggle(500);
+      }
       
       
     // connect contact message to firebase  
@@ -184,7 +178,7 @@ $(document).ready(function () {
     function submitForm(e) {
       e.preventDefault();
       
-      //get values
+      //get values from form
       var name = $("#name").val();
       var company = $("#company").val();
       var email = $("#email").val();
@@ -227,6 +221,10 @@ $(document).ready(function () {
       });
     }
 
+    // change view case study with placeholder text
+    $(".show-case-study").text("Placeholder");
+    
+    
     
 });
 

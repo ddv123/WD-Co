@@ -19,11 +19,15 @@ app.get("/work", function(req, res){
 
 app.get("/about", function(req, res){
     res.render('about');
-})
+});
 
 app.get("/contact", function(req, res){
     res.render('contact');
-})
+});
+
+app.get("/coming-soon", function(req, res){
+    res.render('coming');
+});
 
 app.listen(process.env.PORT, process.env.IP, function(){
     console.log("Server Started...");
