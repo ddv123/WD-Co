@@ -3,21 +3,7 @@ $(document).ready(function () {
     particlesJS.load('particles', '/assets/particles.json', function() {
           console.log('callback - particles.js config loaded');
         });
-        
-    // Initialize Firebase
-    var config = {
-      apiKey: "AIzaSyDRu2NusFCo56QtJ5Z3a7_OA243uHXzbgc",
-      authDomain: "wd-company.firebaseapp.com",
-      databaseURL: "https://wd-company.firebaseio.com",
-      projectId: "wd-company",
-      storageBucket: "wd-company.appspot.com",
-      messagingSenderId: "26738588247"
-    };
-    firebase.initializeApp(config);    
-        
-    //References messages collection
-    var messageRef = firebase.database().ref('messages');
-        
+
     // init Masonry
     var $grid = $('.grid').masonry({
       // options...
@@ -126,6 +112,12 @@ $(document).ready(function () {
         $("h1").text("Coming Soon");
         $("h3").text("Page is under construction. Will be up shortly");
         $(".cta").hide();
+      } else if(url === "/thanks"){
+        $("#landing").addClass("landing-thanks");
+        $("#landing").css("min-height", "80vh");
+        $("h1").text("Email Sent");
+        $("h3").html("Thank you for your time, we will get back to you as soon as possible");
+        $(".cta").hide();
       }
       
       // hover on item
@@ -139,7 +131,6 @@ $(document).ready(function () {
       }, function(){
         $(this).fadeTo(50, "1");
       });
-      
       
       // lets talk button
       $(".lt-side").hide();
@@ -169,58 +160,7 @@ $(document).ready(function () {
         
         $("#"+code).slideToggle(500);
       }
-      
-      
-    // connect contact message to firebase  
-    $("#contact-form").submit(submitForm);
     
-    // listen and submit form
-    function submitForm(e) {
-      e.preventDefault();
-      
-      //get values from form
-      var name = $("#name").val();
-      var company = $("#company").val();
-      var email = $("#email").val();
-      var phone = $("#phone").val();
-      var message = $("#message").val();
-      var projType = [];
-      
-      $(".form-check-input").each(function(){
-        if($(this).is(":checked")){
-          projType.push($(this).val());
-        }
-      });
-      
-      // save message
-      saveMessage(name, company, email, phone, projType, message);
-      
-      // show alert
-      $(".alert").show();
-      
-      // hide alert after 3 seconds
-      $( ".alert" ).delay(4000).fadeOut("slow");
-      
-      // move window up to alert
-      $(window).scrollTop($('#div1').offset().top);
-
-      $("#contact-form").trigger("reset");
-
-    }
-    
-    //Save messages to firebase
-    function saveMessage(name, company, email, phone, projType, message){
-      var newMessageRef = messageRef.push();
-      newMessageRef.set({
-        name: name,
-        company: company,
-        email: email,
-        phone: phone,
-        projType: projType,
-        message: message
-      });
-    }
-
     // change view case study with placeholder text
     $(".show-case-study").text("Placeholder");
     

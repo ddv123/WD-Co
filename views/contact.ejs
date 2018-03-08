@@ -11,22 +11,23 @@
         </ul>
       </div>
       <div class="contact">
-        <div class="alert alert-primary" role="alert">
-          Your message has been sent!
+        <div class="alert alert-success" role="alert">
+          Your message has been sent! 
         </div>
         <h4>Email Us</h4>
-        <form id="contact-form">
+        
+        <form id="contact-form" action="/send" method="post">
           <div class="row">
               <div class="form-group col-md-6 padding">
                 <p>
                   <label  for="name">Name<span class="req"><i class="fas fa-asterisk"></i></span></label>
-                  <input type="text" class="form-control" id="name" placeholder="Your Name Here" required>
+                  <input type="text" class="form-control" id="name" name="name" placeholder="Your Name Here" required>
                 </p>
               </div>
               <div class="form-group col-md-6 padding">
                 <p>
                   <label for="company">Company</label>
-                  <input type="text" class="form-control" id="company" placeholder="Your Company">
+                  <input type="text" class="form-control" name="company" placeholder="Your Company">
                 </p>
               </div>
           </div>    
@@ -35,13 +36,13 @@
               <div class="form-group col-md-6 padding">
                 <p>
                   <label  for="email">Email Address<span class="req"><i class="fas fa-asterisk"></i></span></label>
-                  <input type="email" class="form-control" id="email" placeholder="something@email.com" required>
+                  <input type="email" class="form-control" nane="email" placeholder="something@email.com" required>
                 </p>
               </div>
               <div class="form-group col-md-6 padding">
                 <p>
                   <label for="phone">Phone Number<span class="req"><i class="fas fa-asterisk"></i></span></label>
-                  <input type="text" class="form-control" id="phone" placeholder="(XXX) XXX-XXXX" required>
+                  <input type="text" class="form-control" name="phone" placeholder="(XXX) XXX-XXXX" required>
                 </p>
               </div>
           </div>   
@@ -51,35 +52,35 @@
               <p>Type of Project</p>
               <ul id="proj-type">
                 <li class="form-check form-check-inline">
-                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="brand-strategy">
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="brand-strategy" name="brand-strategy">
                   <label class="form-check-label" for="inlineCheckbox1">Brand Strategy</label>
                 </li>
                 <li class="form-check form-check-inline">
-                  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="logo">
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="logo" name="logo">
                   <label class="form-check-label" for="inlineCheckbox2">Logo</label>
                 </li>
                 <li class="form-check form-check-inline">
-                  <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="ui-ux">
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="ui-ux" name="uiux">
                   <label class="form-check-label" for="inlineCheckbox3">UI/UX</label>
                 </li>
                 <li class="form-check form-check-inline">
-                  <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="web">
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="web" name="web">
                   <label class="form-check-label" for="inlineCheckbox4">Web</label>
                 </li>
                 <li class="form-check form-check-inline">
-                  <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="seo">
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="seo" name="seo">
                   <label class="form-check-label" for="inlineCheckbox5">SEO</label>
                 </li>
                 <li class="form-check form-check-inline">
-                  <input class="form-check-input" type="checkbox" id="inlineCheckbox6" value="social-media">
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox6" value="social-media" name="socialmedia">
                   <label class="form-check-label" for="inlineCheckbox6">Social Media</label>
                 </li>
                 <li class="form-check form-check-inline">
-                  <input class="form-check-input" type="checkbox" id="inlineCheckbox7" value="digital-marketing">
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox7" value="digital-marketing" name="digitalmarketing">
                   <label class="form-check-label" for="inlineCheckbox7">Digital Marketing</label>
                 </li>
                 <li class="form-check form-check-inline">
-                  <input class="form-check-input" type="checkbox" id="inlineCheckbox7" value="not-sure">
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox7" value="not-sure" name="notsure">
                   <label class="form-check-label" for="inlineCheckbox7">Not Sure</label>
                 </li>
               </ul>
@@ -93,7 +94,7 @@
             <div class="form-group col padding">
               <p>
                 <label for="message">Message<span class="req"><i class="fas fa-asterisk"></i></span></label>
-                <textarea class="form-control" id="message" rows="5" required></textarea>
+                <textarea class="form-control" name="message" rows="5" required></textarea>
               </p>
             </div>
           </div>
@@ -101,13 +102,10 @@
           <div class="row">
             <div class="col padding">
               <p>
-                <button href="#div1" class="btn btn-warning" id="submit-button">Submit</button>
+                <button href="#div1" class="btn btn-warning" id="submit-button" type="submit">Submit</button>
               </p>
             </div>
           </div>
-         
-  
-          
         </form>
       </div>
     </div>

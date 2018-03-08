@@ -498,10 +498,6 @@ hr {
 	margin: 0 auto;
 }
 
-
-
-
-
 /*work css=======================================================*/
 
 /* force scrollbar */
@@ -565,7 +561,7 @@ html { overflow-y: scroll; }
 }
 
 .company-info {
-	background-color:rgba(25, 0, 255, 0.75);
+	background-color: rgba(25, 0, 255, 0.75);
 	color: white;
 	text-align: center;
 }

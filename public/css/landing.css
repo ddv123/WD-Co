@@ -202,9 +202,7 @@
       rgba(25, 0, 255, 0.45), 
       rgba(255, 100, 0, 0.40)),
       url("../assets/img/html_css.jpeg");
-  
- 
-  
+
 }
 
 .landing-capabilities{
@@ -223,14 +221,12 @@
       url("https://images.pexels.com/photos/273230/pexels-photo-273230.jpeg?w=940&h=650&auto=compress&cs=tinysrgb");
 }
 
-.landing-coming{
+.landing-coming, .landing-thanks{
   background-image:   
       linear-gradient(
       rgba(25, 0, 255, 0.45), 
       rgba(255, 100, 0, 0.40)),
       url("../assets/img/rustic.jpeg");
-      background-position: top!important;
-     
 }
 
 .landing-contact{
