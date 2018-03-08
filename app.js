@@ -6,10 +6,7 @@ var ejs = require("ejs");
 
 
 
-
-
-
-
+app.set('port', (process.env.PORT || 80))
 
 // view engine setup   
 
@@ -110,6 +107,10 @@ app.get("/thanks", function(req, res){
     res.render('thanks');
 });
 
-app.listen(process.env.PORT, process.env.IP, function(){
-    console.log("Server Started...");
+app.listen(app.get('port'), function() {
+  console.log("Node app is running at localhost:" + app.get('port'));
 });
+
+// app.listen(process.env.PORT, process.env.IP, function(){
+//     console.log("Server Started...");
+// });
