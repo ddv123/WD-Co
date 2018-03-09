@@ -1,10 +1,8 @@
-var express = require("express");
+var express    = require("express"),
+    nodemailer = require("nodemailer"),
+    bodyParser = require("body-parser");
+
 var app = express();
-var nodemailer = require("nodemailer");
-var bodyParser = require("body-parser");
-var ejs = require("ejs");
-
-
 
 app.set('port', (process.env.PORT || 80))
 
