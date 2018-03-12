@@ -109,6 +109,10 @@ app.get("/google95533de7a3269373", function(req, res){
     res.render("google95533de7a3269373");
 })
 
+app.get("/sitemap.xml", function(req,res){
+    res.render("sitemap");
+})
+
 app.listen(app.get('port'), function() {
   console.log("Node app is running at localhost:" + app.get('port'));
 });
