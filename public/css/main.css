@@ -21,6 +21,10 @@ a:hover {
     transition: all 0.2s ease-in-out;
 }
 
+.row {
+	margin: 0 0;
+}
+
 .segment {
 	padding:70px 20px;
 	overflow: auto;

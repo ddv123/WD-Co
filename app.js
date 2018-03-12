@@ -4,7 +4,7 @@ var express    = require("express"),
 
 var app = express();
 
-app.set('port', (process.env.PORT || 8080));
+app.set('port', (process.env.PORT || 80))
 
 // view engine setup   
 
@@ -104,6 +104,10 @@ app.get("/coming-soon", function(req, res){
 app.get("/thanks", function(req, res){
     res.render('thanks');
 });
+
+app.get("/google95533de7a3269373", function(req, res){
+    res.render("google95533de7a3269373");
+})
 
 app.listen(app.get('port'), function() {
   console.log("Node app is running at localhost:" + app.get('port'));
