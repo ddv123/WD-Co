@@ -144,15 +144,15 @@ $(document).ready(function () {
       // skill slide shelf   
       
       $("#brand").click(function(){
-        slideShelf("brand", "code1");
+        slideShelf("brand", "branding-design-info");
       });
       
       $("#web-dev").click(function(){
-        slideShelf("web-dev", "code2");
+        slideShelf("web-dev", "web-development-info");
       });
       
       $("#dmna").click(function(){
-        slideShelf("dmna", "code3");
+        slideShelf("dmna", "marketing-analytics-info");
       });
       
       function slideShelf(id, code){

@@ -201,8 +201,7 @@
       linear-gradient(
       rgba(25, 0, 255, 0.45), 
       rgba(255, 100, 0, 0.40)),
-      url("../assets/img/html_css.jpeg");
-
+      url("../assets/img/web-design-home.jpeg");
 }
 
 .landing-capabilities{
@@ -210,7 +209,7 @@
       linear-gradient(
       rgba(25, 0, 255, 0.45), 
       rgba(255, 100, 0, 0.40)),
-      url("../assets/img/code.jpeg");
+      url("../assets/img/web-design-services.jpeg");
 }
 
 .landing-work{
@@ -218,7 +217,7 @@
       linear-gradient(
       rgba(25, 0, 255, 0.45), 
       rgba(255, 100, 0, 0.40)),
-      url("https://images.pexels.com/photos/273230/pexels-photo-273230.jpeg?w=940&h=650&auto=compress&cs=tinysrgb");
+      url("../assets/img/web-design-portfolio.jpeg");
 }
 
 .landing-coming, .landing-thanks{
@@ -226,7 +225,7 @@
       linear-gradient(
       rgba(25, 0, 255, 0.45), 
       rgba(255, 100, 0, 0.40)),
-      url("../assets/img/rustic.jpeg");
+      url("../assets/img/web-design-default.jpeg");
 }
 
 .landing-contact{
@@ -234,7 +233,7 @@
       linear-gradient(
       rgba(25, 0, 255, 0.45), 
       rgba(255, 100, 0, 0.40)),
-      url("../assets/img/phone.jpeg");
+      url("../assets/img/web-design-contact.jpeg");
 }
 
 

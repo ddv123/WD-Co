@@ -39,36 +39,6 @@ a:hover {
 	width:100%;
 }
 
-/*introduction div===================================================*/
-
-.intro-heading{
-	padding-bottom: 10px;	
-}
-
-.lets-talk {
-	font-size:100px;
-	position: absolute;
-	left: 50%;
-	transform: translate(-50%);
-}
-
-#chatbox {
-	position: relative;
-}
-
-.lt-side{
-	color: black;
-	font-size: 30px;
-	margin: 0 auto;
-	position: absolute;
-	left: 50%;
-	top:80%;
-	transform: translate(-50%);
-	display: none;
-	
-}
-
-
 /*navigation css====================================================*/
 
 #navlogo {
@@ -111,11 +81,43 @@ a:hover {
 }
 
 
-/*skill section=================================================================*/
+
+/*introduction div===================================================*/
+
+.intro-heading{
+	padding-bottom: 10px;	
+}
+
+.lets-talk {
+	font-size:100px;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
+}
+
+#chatbox {
+	position: relative;
+}
+
+.lt-side{
+	color: black;
+	font-size: 30px;
+	margin: 0 auto;
+	position: absolute;
+	left: 50%;
+	top:80%;
+	transform: translate(-50%);
+	display: none;
+	
+}
 
 
 
-#skills {
+/*service section=================================================================*/
+
+
+
+#services {
 	min-height: 400px;
 	background-color: rgba(25, 0, 255, 0.75);
 	padding: 30px 30px;
@@ -123,25 +125,25 @@ a:hover {
 	color: white;
 }
 
-#skills-content{
+#service-content{
 	/*max-width: 900px;*/
 	margin: 0 auto;
 }
 
-#skill-heading {
+#service-heading {
 	text-align: center;
 	padding-bottom: 20px
 }
 
-.skill-desc {
+.service-desc {
 	font-size: 18px;
 }
 
-.caps{
+.capability-link{
 	color: white;
 	opacity: 0.75;
 }
-.caps:hover {
+.capability-link:hover {
 	color: white;
 	opacity: 1;
 }
@@ -163,7 +165,7 @@ h2 {
 	font-size: 50px;
 }
 
-.skill-icon {
+.service-icon {
 	font-size: 18px;
 	padding: 15px 40px;
 	
@@ -186,7 +188,7 @@ h2 {
 
 /*featured products============================================================*/
 
-#feat-prod{
+#project-header{
 	background-color: #191919;
 	color: white;
 }
@@ -474,7 +476,7 @@ hr {
 #p1{
 	background: linear-gradient(
       rgba(25, 0, 255, 0.45), 
-      rgba(225, 0, 255, 0)), url("../assets/img/prototype.png") no-repeat center;
+      rgba(225, 0, 255, 0)), url("../assets/img/branding-design.jpeg") no-repeat center;
 	background-size: cover;
 	background-attachment: fixed;
 }
@@ -482,7 +484,7 @@ hr {
 #p2{
 	background: linear-gradient(
       rgba(25, 0, 255, 0.45), 
-      rgba(255, 100, 0, 0)), url("../assets/img/website.png") no-repeat center;
+      rgba(255, 100, 0, 0)), url("../assets/img/web-development.jpg") no-repeat center;
 	background-size: cover;
 	background-attachment: fixed;
 	padding-left: 50px;
@@ -491,7 +493,7 @@ hr {
 #p3{
 	background: linear-gradient(
       rgba(25, 0, 255, 0.45), 
-      rgba(255, 100, 0, 0)), url("../assets/img/analytics.png") no-repeat center;
+      rgba(255, 100, 0, 0)), url("../assets/img/marketing-analytics.jpg") no-repeat center;
 	background-size: cover;
 	background-attachment: fixed;
 }
