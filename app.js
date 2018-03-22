@@ -1,10 +1,10 @@
+require('dotenv').config();
+
 var express    = require("express"),
     nodemailer = require("nodemailer"),
     bodyParser = require("body-parser");
 
 var app = express();
-
-app.set('port', (process.env.PORT || 8080))
 
 // view engine setup   
 
@@ -63,16 +63,16 @@ app.post("/send", function(req, res){
         <h3>Message</h3>
         <p> ${req.body.message}</p>
     `;
-  
+
     var transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
         type: 'OAuth2',
-        user: 'vudavid0@gmail.com',
-        clientId: '764085792415-ahvfc4a4kpadnvnb8avul8q1qolj08m4.apps.googleusercontent.com',
-        clientSecret: 'uHnxhJuZodV53GdHcK7wZyt3',
-        refreshToken: '1/GHEzIw3aFWYZ9YziwAxwWaG-av6ohwnAHyGanReyVNk',
-        accessToken: 'ya29.Glt3BeFX2aZcesRtSgwX-L6xCt6wOTf1ORlPJCJKobzGTKWZv5Lqgn1gqPpob0dCb3T3HCZtznQbrEMdyN4VcFMO5gdGYgdfSqe4L3j-hX5o04_bA9ocbHQV0DxH',
+        user: process.env.GMAIL_USER,
+        clientId: process.env.CLIENT_ID,
+        clientSecret: process.env.CLIENT_SEC,
+        refreshToken: process.env.REF_TOK,
+        accessToken: process.env.ACS_TOK
       }
     });
     
@@ -113,10 +113,6 @@ app.get("/sitemap.xml", function(req,res){
     res.render("sitemap");
 })
 
-app.listen(app.get('port'), function() {
-  console.log("Node app is running at localhost:" + app.get('port'));
+app.listen(process.env.HOST, function() {
+  console.log("Server Started...");
 });
-
-// app.listen(process.env.PORT, process.env.IP, function(){
-//     console.log("Server Started...");
-// });
