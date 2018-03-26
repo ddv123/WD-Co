@@ -162,7 +162,7 @@ $(document).ready(function () {
       }
     
     // change view case study with placeholder text
-    $(".show-case-study").text("Placeholder");
+    $(".placeholder").text("Placeholder");
     
     
     
